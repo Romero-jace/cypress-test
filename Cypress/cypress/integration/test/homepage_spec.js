@@ -21,10 +21,8 @@ context ('Homepage Tests', () => {
             .should('have.attr', 'href', '/themes');
         homepage.customersNavBar()
             .should('have.attr', 'href', '/customers');
-
         // homepage.resourcesNavBar() I was trying to trigger the mouseover/hover state and couldn't, but you can verify the hrefs are there (I would want to look into this more on how to get the hover/mouseover to work properly)
         // homepage.studioNavBar()
-            
         homepage.phoneNavBar()
             .should('have.attr', 'href', 'tel:+18006463517');
         homepage.loginNavBar()
@@ -49,6 +47,12 @@ context ('Homepage Tests', () => {
     });
 
     it('will verify help anchors/links go to proper sections', () => {
+        /* inViewport was an assertion created by someone else that I added
+        The problem that I noticed is while it does verify a little bit
+        it still will give a bit of a false positive because of the way Cypress
+        does scrolling when running tests technically these sections are in the viewport. 
+        Which is why I suggest some sort of visual verification for these sections
+        if I had to automate this page in the future */
         homepage.createStoreAnchor()
             .click({force:true})
         homepage.createStoreSection()
