@@ -1,4 +1,4 @@
-import { loginPageObjects } from "../page_objects/login_page_objects";
+import { loginPageObjects } from "../../page_objects/login_page_objects";
 
 context ('Login Page Tests', () => {
 

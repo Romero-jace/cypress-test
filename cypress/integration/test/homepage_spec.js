@@ -1,4 +1,4 @@
-import { homepageObjects } from "../page_objects/homepage_objects";
+import { homepageObjects } from "../../page_objects/homepage_objects";
 
 context ('Homepage Tests', () => {
 
